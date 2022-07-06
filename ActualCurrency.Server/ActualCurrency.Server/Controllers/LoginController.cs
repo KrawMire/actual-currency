@@ -8,9 +8,16 @@ namespace ActualCurrency.Server.Controllers
 {
     public class LoginController : Controller
     {
-        public IActionResult Index()
+        [HttpPost]
+        [Route("/api/login/")]
+        public IActionResult Index([FromBody]Models.User user)
         {
-            return View();
+            if (user.Email != null && user.Password != null)
+            {
+                return Json(new Models.Response(user.Email));
+            }
+
+            return Json(new Models.Response(false));
         }
     }
 }

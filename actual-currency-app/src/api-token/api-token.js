@@ -1,11 +1,21 @@
 import { useState } from "react";
 
 function ApiToken() {
-    const [apiToken, setApiToken] = useState('test-api-token');
+    const [apiToken, setApiToken] = useState('');
 
     function onClickGenerate(e) {
-        let token = '';
-        setApiToken(token);
+        fetch('http://localhost:5233/api/token')
+        .then(response => response.json())
+        .then(response => {
+            console.log(response)
+            if (response) {
+                if (response.success) {
+                    setApiToken(response.data);
+                } else {
+                    alert('An error occured');
+                }
+            }
+        });
     }
 
     return (
