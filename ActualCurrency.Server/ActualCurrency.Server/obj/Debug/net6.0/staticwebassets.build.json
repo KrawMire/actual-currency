@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Lw5kTmeg+Rxm5Hl1DPOCRKN6jZkcde69JjUbP7rup5c=",
+  "Source": "ActualCurrency.Server",
+  "BasePath": "_content/ActualCurrency.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
