@@ -44,8 +44,15 @@ namespace ActualCurrency.Server.Controllers
 
                     string xmlString = enc.GetString(byteResponse);
                     var xDoc = XDocument.Parse(xmlString);
-                    var items = xDoc.Root.Elements("ValCurs")
-                        .Select(element => element.Value)
+                    var items = xDoc.Root.Elements("Valute")
+                        .Select(element => new Models.Valute
+                        {
+                            NumCode = element.Element("NumCode").Value,
+                            Name = element.Element("Name").Value,
+                            Value = element.Element("Value").Value,
+                            CharCode = element.Element("CharCode").Value,
+                            Nominal = element.Element("Nominal").Value
+                        })
                         .ToList();
 
                     return Json(JsonConvert.SerializeObject(items));
