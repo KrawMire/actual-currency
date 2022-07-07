@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Register() {
+function Register(props) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -16,7 +16,12 @@ function Register() {
                     body: JSON.stringify({Email: email, Password: password})
                 }).then(response => response.json())
                 .then(response => {
-                    console.log(response);
+                    if (response.success) {
+                        props.setStorage({userId: response.data});
+                        alert("New user successfully added");
+                    } else {
+                        console.log("An error occured: " + response.error);
+                    }
                 });
             } else {
                 alert('The passwords does not match')

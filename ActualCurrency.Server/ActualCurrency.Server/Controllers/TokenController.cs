@@ -12,7 +12,7 @@ namespace ActualCurrency.Server.Controllers
         [Route("/api/token")]
         public ActionResult Index()
         {
-            return Json(new Models.Response(new Guid().ToString()));
+            return Json(new Responses.Response(Guid.NewGuid().ToString()));
         }
     }
 }

@@ -1,8 +1,10 @@
 import { useState } from "react";
 
-function Login() {
+function Login(props) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+    let isLoggedIn = props.storage.userId != null;
 
     function onLogIn(e) {
         if (email && email !== '' && password && password !== '') {
@@ -15,7 +17,15 @@ function Login() {
             })
             .then(response => response.json())
             .then(response => {
-                console.log(response);
+                if (response.success) {
+                    props.setStorage({userId: response.data});
+
+                    // Clear the email and password fields
+                    setEmail('');
+                    setPassword('');
+                } else {
+                    console.log("An error occured: " + response.error);
+                }
             });
         } else {
             alert('Email or password is not specified');
@@ -23,7 +33,7 @@ function Login() {
     }
 
     function onLogOut() {
-
+        props.setStorage({userId: null});
     }
 
     return (
@@ -38,8 +48,8 @@ function Login() {
                 <input value={password} onChange={e => setPassword(e.target.value)} />
             </div>
             <div className="login-button-group">
-                <button onClick={onLogIn}>Log In</button>
-                <button onClick={onLogOut}>Log Out</button>
+                <button onClick={onLogIn} disabled={isLoggedIn}>Log In</button>
+                <button onClick={onLogOut} disabled={!isLoggedIn}>Log Out</button> 
             </div>
         </div>
     )

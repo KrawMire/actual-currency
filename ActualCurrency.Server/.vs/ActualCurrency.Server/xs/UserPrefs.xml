@@ -1,4 +1,37 @@
 ﻿<Properties StartupConfiguration="{4FAE69DB-6357-4673-892C-67ADDB71DEFE}|Default">
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.ActualCurrency.Server FirstBuild="True" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ActualCurrency.Server/Controllers/RegisterController.cs">
+    <Files>
+      <File FileName="ActualCurrency.Server/Program.cs" Line="18" Column="58" />
+      <File FileName="ActualCurrency.Server/Controllers/LoginController.cs" Line="20" Column="74" />
+      <File FileName="ActualCurrency.Server/Controllers/RegisterController.cs" Line="37" Column="70" />
+      <File FileName="ActualCurrency.Server/Controllers/TokenController.cs" Line="15" Column="38" />
+      <File FileName="ActualCurrency.Server/Responses/ErrorResponse.cs" Line="15" Column="34" />
+      <File FileName="ActualCurrency.Server/appsettings.json" Line="1" Column="1" />
+      <File FileName="ActualCurrency.Server/Models/DatabaseContext.cs" Line="7" Column="6" />
+      <File FileName="ActualCurrency.Server/Models/User.cs" Line="2" Column="52" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ActualCurrency.Server" expanded="True">
+            <Node name="ActualCurrency.Server" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Responses" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.ActualCurrency.Server PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
