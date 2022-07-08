@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using Microsoft.AspNetCore.Mvc;
@@ -44,7 +41,10 @@ namespace ActualCurrency.Server.Controllers
 
                     string xmlString = enc.GetString(byteResponse);
                     var xDoc = XDocument.Parse(xmlString);
-                    var items = xDoc.Root.Elements("Valute")
+
+                    if (xDoc != null)
+                    {
+                        var items = xDoc.Root.Elements("Valute")
                         .Select(element => new Models.Valute
                         {
                             NumCode = element.Element("NumCode").Value,
@@ -55,7 +55,8 @@ namespace ActualCurrency.Server.Controllers
                         })
                         .ToList();
 
-                    return Json(JsonConvert.SerializeObject(items));
+                        return Json(JsonConvert.SerializeObject(items));
+                    }
                 }
             }
 

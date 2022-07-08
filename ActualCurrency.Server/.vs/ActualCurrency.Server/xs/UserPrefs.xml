@@ -1,15 +1,21 @@
 ﻿<Properties StartupConfiguration="{4FAE69DB-6357-4673-892C-67ADDB71DEFE}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ActualCurrency.Server/Controllers/RegisterController.cs">
+  <MonoDevelop.Ide.ItemProperties.ActualCurrency.Server PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="ActualCurrency.Server/appsettings.json">
     <Files>
       <File FileName="ActualCurrency.Server/Program.cs" Line="18" Column="58" />
-      <File FileName="ActualCurrency.Server/Controllers/LoginController.cs" Line="20" Column="74" />
-      <File FileName="ActualCurrency.Server/Controllers/RegisterController.cs" Line="37" Column="70" />
-      <File FileName="ActualCurrency.Server/Controllers/TokenController.cs" Line="15" Column="38" />
-      <File FileName="ActualCurrency.Server/Responses/ErrorResponse.cs" Line="15" Column="34" />
-      <File FileName="ActualCurrency.Server/appsettings.json" Line="1" Column="1" />
-      <File FileName="ActualCurrency.Server/Models/DatabaseContext.cs" Line="7" Column="6" />
-      <File FileName="ActualCurrency.Server/Models/User.cs" Line="2" Column="52" />
+      <File FileName="ActualCurrency.Server/Controllers/LoginController.cs" Line="31" Column="66" />
+      <File FileName="ActualCurrency.Server/Controllers/RegisterController.cs" Line="29" Column="43" />
+      <File FileName="ActualCurrency.Server/Controllers/TokenController.cs" Line="15" Column="62" />
+      <File FileName="ActualCurrency.Server/appsettings.json" Line="3" Column="91" />
+      <File FileName="ActualCurrency.Server/Controllers/ApiController.cs" Line="44" Column="1" />
+      <File FileName="ActualCurrency.Server/Responses/ApiResponse.cs" Line="8" Column="1" />
+      <File FileName="ActualCurrency.Server/Models/Valute.cs" Line="3" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -28,10 +34,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.ActualCurrency.Server PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
