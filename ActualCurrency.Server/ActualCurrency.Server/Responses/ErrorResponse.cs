@@ -3,7 +3,7 @@ namespace ActualCurrency.Server.Responses
 {
     public class ErrorResponse : Response
     {
-        public string Error { get; set; }
+        public string? Error { get; set; }
 
         public ErrorResponse()
         {

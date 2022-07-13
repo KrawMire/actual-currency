@@ -18,7 +18,7 @@ namespace ActualCurrency.Server.Controllers
 
         [HttpPost]
         [Route("/api/login/")]
-        public IActionResult Index([FromBody]Models.User user)
+        public IActionResult Index([FromBody]User user)
         {
             if (user.Email != null && user.Password != null)
             {
